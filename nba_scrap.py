@@ -36,6 +36,7 @@ def get_stats():
 
     teams = list(filter(lambda x: x['name'] != "Team", teams))
     teams.sort(key=lambda x: int(x['ppg']['rank']))
+    print('NBA Ranked Avg PPG')
 
     for i, team in enumerate(teams):
         name = team['name']
@@ -44,4 +45,4 @@ def get_stats():
         print(f"{i + 1}. {name} - {nickname} - {ppg}")
 
 
-get_scoreboard()
+get_stats()
